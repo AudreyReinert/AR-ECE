@@ -13,16 +13,42 @@
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <script src="menuOpen.js" charset="utf-8"></script>
 
-    <div style= 'position: fixed; top: 10px; width:10%; text-align: left; z-index: 1;' id="mySidenav" class="sidenav">
 
-      <a href="#">Detailed lesson</a>
+    <div style= 'position: fixed; top: 10px;  text-align: left; z-index: 1;' id="mySidenav" class="sidenav">
+      <a href="tempPage.html">Detailed lesson</a>
 
-      <a href="#"onclick="print()"">Help</a>
+      <button class="dropdown-btn">Help
+     <i class="fa fa-caret-down"></i>
+   </button>
+   <div class="dropdown-container">
+     <a href="tempPage.html">Link 1</a>
+     <a href="tempPage.html">Link 2</a>
+     <a href="tempPage.html">Link 3</a>
+   </div>
+
       <!--- Help should have an expanded menu on the side--->
       <a href="#">Level select</a>
       <a href="#">Exit to main menu</a>
+
     </div>
 
+
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>
 
 
 
