@@ -27,7 +27,9 @@
   <a-scene embedded
     arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;'>
     <!-- arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;'> -->
-
+    <a-marker preset='hiro'>
+  <a-box    position="0 0 0" material='color: green;'  >
+</a-box>
     <a-marker type='barcode' value='0'>
       <a-box position='0 0.5 0' color="#f58231"></a-box>
     </a-marker>
