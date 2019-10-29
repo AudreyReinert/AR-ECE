@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  	  <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+
 </head>
   <body>
-    <a-scene>
-    <a-gltf-model src="scene.gltf"></a-gltf-model>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+  	<script type="text/javascript">
+  		var el=document.querySelector('#Lamp');
+  		el.setAttribute('scale',{x: -1, y:-1,x:-1})
+
+  	</script>
+    <a-scene embedded
+    arjs='sourceType: webcam'>
+
+      <a-marker preset='hiro'>
+
+<a-entity 
+id="Lamp"
+scale="1 1 1 "
+gltf-model=”url(models/scene.gltf)” scale= "1/1000 1/1000  1/1000 ">
+</a-entity>
+  </a-marker>
   </a-scene>
   </body>
 </html>
+
+
