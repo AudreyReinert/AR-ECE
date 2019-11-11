@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+
+    <link rel="stylesheet" href="generic.css">
+    <link rel="stylesheet" href="sideNav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="gridMenu.css">
+      <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+      <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+
+      <!-- add this script in order to load a large set of 3D model extensions-->
+      <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+        <div style= 'position: fixed; top: 10px;  text-align: left; z-index: 1;' id="mySidenav" class="sidenav">
+          <a href="#">Detailed lesson</a>
+
+          <button class="dropdown-btn">Help
+         <i class="fa fa-caret-down"></i>
+       </button>
+       <div class="dropdown-container">
+         <a href="#">Link 1</a>
+         <a href="#">Link 2</a>
+         <a href="#">Link 3</a>
+       </div>
+
+          <!--- Help should have an expanded menu on the side--->
+          <a href="newGame.html">Level select</a>
+          <a href="mainMenu.html">Exit to main menu</a>
+
+        </div>
+
+
+
+
+
+
+  <a-scene embedded
+    arjs='size : 5 ;sourceType: webcam; debugUIEnabled: false; detectionMode: color_and_matrix; matrixCodeType: 6x6;patternRatio: 0.5'>
+    <!-- arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; detectionMode: mono_and_matrix; matrixCodeType: 3x3_HAMMING63;'> -->
+
+
+        <a-marker type='barcode' value='0'>
+          <a-box position='0 0.5 0' color="#f58231"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='1'>
+            <a-box position='0 0.5 0' color="#800000"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='2'>
+            <a-box position='0 0.5 0' color="#9A6324"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='3'>
+            <a-box position='0 0.5 0' color="#808000"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='4'>
+            <a-box position='0 0.5 0' color="#469990"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='5'>
+            <a-box position='0 0.5 0' color="#000075"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='6'>
+            <a-box position='0 0.5 0' color="#000000"></a-box>
+        </a-marker>
+        <a-marker type='barcode' value='7'>
+            <a-box position='0 0.5 0' color="#e6194B"></a-box>
+        </a-marker>
+    <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+    <a-entity camera></a-entity>
+  </a-scene>
+  </body>
+</html>
